@@ -14,7 +14,7 @@ func main() {
 
 		f := fib()
 
-		res := &response{Message: "Hello World"}
+		res := &response{Message: "Hello GitHub"}
 
 		for _, e := range os.Environ() {
 			pair := strings.Split(e, "=")
@@ -26,7 +26,7 @@ func main() {
 		}
 
 		// Beautify the JSON output
-		out, _ := json.MarshalIndent(res, "", "   ")
+		out, _ := json.MarshalIndent(res, "", "  ")
 
 		// Normally this would be application/json, but we don't want to prompt downloads
 		w.Header().Set("Content-Type", "text/plain")
